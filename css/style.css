@@ -1,0 +1,82 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+header {
+    text-align: -webkit-center;
+    background: black;
+}
+
+.banner {
+    background-image: url(./assets/images/banner.png);
+    width: 1440px;
+    height: 732px;
+    top: -127px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.banner-content p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.48px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+.banner-content button {
+    color: #3BA1CD;
+    width: Fixed (326px)px;
+    height: Hug (57px)px;
+    top: 473px;
+    left: 557px;
+    padding: 19px 91px 19px 91px;
+    gap: 31px;
+    border: 2px 0px 0px 0px solid transparent;
+    border-image: linear-gradient(to right, #33A8DB, #1472B7) 1;
+    opacity: 0px;    
+
+}
+
+h1 {
+    width: 434px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #33A8DB, #1472B7); 
+    background-clip: text;
+    color: transparent; 
+    -webkit-background-clip: text; /* Para compatibilidade com navegador Chrome */
+}
+
+.logo{
+    width: 268px;
+    height: 268px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+#course-content {
+
+}
+
+.modules-list {
+
+}
+
+.module {
+
+}
+
+#transform-world {
+
+}
+
+#professional-challenges {
+
+}
+
+.dio-logo {
+
+}
