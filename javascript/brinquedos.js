@@ -22,3 +22,39 @@ const resultado = `<h1 style="color: ${cor}; font-size: ${tamanhoFonte};">${nome
 
 // Exibindo o resultado no console
 print(resultado);
+
+const idade = parseInt(gets());
+
+let categoria;
+
+if( idade <= 9) {
+    categoria = "Infantil";
+}
+else if ( idade <= 14 ) {
+    categoria = "Pre-Adolecente";
+}
+else if ( idade <= 18) {
+    categoria = "Adolescente";
+}
+print(categoria);
+
+// IF, FOR
+
+let dados = gets().split(", ");
+let estoque = [];
+
+dados.forEach(item => {
+  
+    let [nome, quantidade] = item.split(":");
+    quantidade = parseInt(quantidade);
+  
+    if (quantidade < 5) {
+        estoque.push(nome + ": Baixo");
+    } else {
+        estoque.push(nome +": Adequado");
+    }
+    
+});
+
+// Saída formatada corretamente
+print(estoque.join(", "));
