@@ -11,3 +11,4 @@ if(notaSemestre < 5) {
 }else {
     console.log('Aprovado!  Sua nota nesse Semestre foi '+ notaSemestre);
 }
+

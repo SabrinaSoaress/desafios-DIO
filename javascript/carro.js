@@ -24,3 +24,25 @@ if (tipoCombustivel === 'Gasolina') {
 } else {
     console.log('Não identificamos o seu tipo de combustivel')
 };
+
+
+class Carros {
+    marca;
+    cor;
+    gastoKm;
+
+    constructor(marca, cor, gastoKm) {
+        this.marca = marca;
+        this.cor = cor;
+        this.gastoKm = gastoKm;
+    }
+    calcularGastos(distanciaEmKm, precoCombustivel) {
+        return distanciaEmKm * this.gastoKm * precoCombustivel;
+    }
+}
+
+const uno = new Carros('fiat', 'prata', 8 / 10);
+console.log(uno.calcularGastos(70, 5));
+
+const compass = new Carros('jeep', 'preto', 3 / 10);
+console.log(compass.calcularGastos(70, 5));
