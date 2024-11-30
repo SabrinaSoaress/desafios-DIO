@@ -55,3 +55,66 @@ dados.forEach(item => {
 
 // Saída formatada corretamente
 print(estoque.join(", "));
+
+function verificarPromocoes() {
+    
+        const taxaDesconto = 0.10;
+        const entrada = gets(); 
+        const produtos = entrada.split(' - '); 
+        const resultado = [];
+    
+        produtos.forEach(produto => {
+            const [nome, quantidadePreco] = produto.split(': '); 
+            const [quantidade, precoUnitario] = quantidadePreco.split(', ').map(Number); 
+    
+            let precoFinal;
+            if (quantidade >= 5) {
+                precoFinal = precoUnitario * (1 - taxaDesconto);
+            } else{
+              precoFinal = precoUnitario;
+            }
+            resultado.push(`${nome}: ${precoFinal.toFixed(2)}`);
+        });
+    
+        print(resultado.join(' - '));
+    }
+    
+    //Chame a função:
+    verificarPromocoes();
+
+
+    class CalculadoraFrete {
+
+        constructor(taxaFixa, taxaPorProduto) {
+           this.taxaFixa = taxaFixa;
+           this.taxaPorProduto = taxaPorProduto;
+            
+        }
+    
+        calcularFrete(listaProdutos) {
+            const produtos = listaProdutos.split(', ');
+            
+            const quantidadeTotal = produtos.reduce((total, produto) => {
+                const quantidade = parseInt(produto.split(':')[1], 10);
+                return total + quantidade;
+            }, 0);
+            
+          const freteTotal = this.taxaFixa + this.taxaPorProduto * quantidadeTotal;
+        
+             return freteTotal.toFixed(2);
+        }
+    }
+    
+    function main() {
+      
+        const listaProdutos = gets();
+        
+        const taxaFixa = parseFloat(gets());
+        
+        const taxaPorProduto = parseFloat(gets());
+        
+        const calculadora = new CalculadoraFrete(taxaFixa, taxaPorProduto);
+        
+        print(calculadora.calcularFrete(listaProdutos));
+    }
+    main();

@@ -46,3 +46,4 @@ console.log(uno.calcularGastos(70, 5));
 
 const compass = new Carros('jeep', 'preto', 3 / 10);
 console.log(compass.calcularGastos(70, 5));
+
